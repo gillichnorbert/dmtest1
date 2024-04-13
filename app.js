@@ -1,18 +1,10 @@
-const clearListBtn = document.getElementById("clearListBtn");
-const summaryBody = document.getElementById("summeryBody");
-const total = document.getElementById("total");
+// itemList inicializálása üres tömbként
+let itemList = [];
 
-const itemList = [];
-
-// Kattintás eseménykezelő hozzáadása az első gombhoz
-itemButton1.addEventListener('click', function() {
-  addItemToList("Jack Daniel's 0,04", 1490);
-});
-
-// Kattintás eseménykezelő hozzáadása a második gombhoz
-itemButton2.addEventListener('click', function() {
-  addItemToList("Finlandia 0,04", 1290);
-});
+// Az itemList inicializálásának helye a többi változóval együtt
+const summaryBody = document.getElementById('summeryBody');
+const total = document.getElementById('total');
+const clearListBtn = document.getElementById('clearListBtn');
 
 // Tétel hozzáadása a listához vagy darabszám növelése
 function addItemToList(name, price) {
@@ -50,7 +42,7 @@ function updateTotal() {
   itemList.forEach(item => {
     sum += item.price * item.piece; // Darabszámot is figyelembe vesszük
   });
-  total.innerText = `Végösszeg: ${sum} Ft`;
+  total.innerText = ` ${sum} Ft`;
 }
 
 // Lista törlése gomb eseménykezelője

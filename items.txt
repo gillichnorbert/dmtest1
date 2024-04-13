@@ -1,0 +1,2 @@
+id;name;amount;price;type
+1;Coca-Cola;0,5;1290;soda
